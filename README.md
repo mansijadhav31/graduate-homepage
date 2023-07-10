@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The figma files can be found here : https://www.figma.com/file/ToFnt0kSakJdTMpirWQaaw/loyola?type=design&node-id=0%3A1&mode=design&t=gEfcGoFjYoKZEnFA-1
+
 ## Available Scripts
 
 In the project directory, you can run:
