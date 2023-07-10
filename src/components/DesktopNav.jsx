@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { toggleResponsiveclassName } from "../functions";
+import React from "react";
 
 function DesktopNav() {
   return (
-    <div className="site-nav-wrapper">
-      <div className="site-nav-header p-5 font-sans space-x-10 text-3xl pr-24">
+    <div className="site-nav-wrapper sticky">
+      <div className="site-nav-header text-white p-5 font-sans space-x-10 text-3xl pr-24">
         <a href="https://www.luc.edu/searchalt/index.shtml#gsc.tab=0">
-          {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -37,11 +35,15 @@ function DesktopNav() {
         </div>
         <a href="#">Visit Us</a>
         <a href="#">Request Information</a>
-
-        <button href="https://gpem.luc.edu/apply/" className="apply-button font-semibold uppercase">Apply</button>
+        <button
+          href="https://gpem.luc.edu/apply/"
+          className="apply-button font-semibold uppercase"
+        >
+          Apply
+        </button>
       </div>
-      <div className="grad-nav-header inline flex">
-        <div className="header-logo float-left p-18">
+      <div className="grad-nav-header flex items-center">
+        <div className="header-logo p-18">
           <a href="https://www.luc.edu/" className="active">
             <img
               src="https://gpem-luc-edu.cdn.technolutions.net/www/images/GPEM_Website/LUC_stacked.png"
@@ -49,21 +51,21 @@ function DesktopNav() {
             />
           </a>
         </div>
-        <div className="grad-home inline mr-96 pb-4">
-          <span className="text-5xl font-bold mr-4 pl-8">
+        <div className="grad-home pb-4">
+          <span className="text-5xl font-bold pl-4">
             Graduate &amp; Professional
           </span>
           <br />
-          <span className="text-5xl font-bold pl-8">Studies</span>
+          <span className="text-5xl font-bold pl-4">Studies</span>
         </div>
-        <div className="inline float-right space-x-9 mt-24">
-          <a className="font-bold text-4xl nav-links pb-3" href="#news">
+        <div className="nav-links text-4xl font-bold flex-grow flex justify-end items-center space-x-9 mr-12">
+          <a className=" nav-links nav-links-underline" href="#news">
             Explore Programs
           </a>
-          <a className="font-bold text-4xl nav-links pb-3" href="#contact">
+          <a className="nav-links nav-links-underline" href="#contact">
             Getting Started
           </a>
-          <a className="font-bold text-4xl pr-8 nav-links pb-3" href="#about">
+          <a className="nav-links  nav-links-underline" href="#about">
             Why Loyola
           </a>
         </div>
