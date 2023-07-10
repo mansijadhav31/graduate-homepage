@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import { toggleResponsiveClass } from './functions';
+import { Fade as Hamburger } from 'hamburger-react';
+import DesktopNav from './components/DesktopNav';
+import { MobileNav } from './components/MobileNav';
+import LetterPage from './components/LetterPage';
 
 function App() {
+  const [isResponsive, setIsResponsive] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsResponsive(window.innerWidth <= 600);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }; 
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div  id="myTopnav">
+
+        <div className='justify-right'>
+          {isResponsive ? (
+            <MobileNav toggled={false} toggle={toggleResponsiveClass} />
+           
+          ) : (
+            <DesktopNav/>
+          )}
+        </div>
+      </div>
+      <LetterPage/>
     </div>
   );
 }
 
 export default App;
+
